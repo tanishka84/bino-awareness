@@ -82,14 +82,17 @@
 
 .try-bino-button {
   display: inline-block;
-  background-color: #25D366; /* WhatsApp green */
+  padding: 10px 20px;
+  background-color: #25d366;
   color: white;
-  padding: 12px 24px;
-  font-size: 16px;
+  border-radius: 999px;
   font-weight: bold;
-  border-radius: 6px;
   text-decoration: none;
-  margin-top: 20px;
+  transition: background 0.3s;
+}
+
+.try-bino-button:hover {
+  background-color: #1da851;
 }
 
 a.primary {

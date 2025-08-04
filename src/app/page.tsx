@@ -21,17 +21,19 @@ export default function Page() {
     Manage agents, automate support, and track insights — all in one place.
   </p>
 
-  {/* WhatsApp CTA Button */}
-  <a
-  href="https://wa.me/+917517378105?text=Hi Bino, I want to try your search feature!"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="try-bino-button"
+  {/* WhatsApp CTA Button (Demo Mode) */}
+<a
+  href="#"
+  onClick={(e) => {
+    e.preventDefault();
+    alert("WhatsApp integration is currently in demo mode. The feature will go live post-deployment.");
+  }}
+  className="btn btn-success rounded-pill px-4 mt-3"
 >
   Try Bino on WhatsApp
 </a>
-<p style={{ fontSize: "12px", color: "gray" }}>
-  *WhatsApp integration is demo-only for now. Full number will be available post-deployment.
+<p className="text-muted mt-2" style={{ fontSize: "0.85rem" }}>
+  *Demo only — WhatsApp integration coming soon.
 </p>
 </section>
 
