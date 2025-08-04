@@ -23,13 +23,16 @@ export default function Page() {
 
   {/* WhatsApp CTA Button */}
   <a
-    href="https://wa.me/918217270218?text=Hi%20Bino"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="btn btn-success btn-lg mt-3"
-  >
-    Try Bino on WhatsApp
-  </a>
+  href="https://wa.me/+917517378105?text=Hi Bino, I want to try your search feature!"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="try-bino-button"
+>
+  Try Bino on WhatsApp
+</a>
+<p style={{ fontSize: "12px", color: "gray" }}>
+  *WhatsApp integration is demo-only for now. Full number will be available post-deployment.
+</p>
 </section>
 
       {/* Features Section */}
