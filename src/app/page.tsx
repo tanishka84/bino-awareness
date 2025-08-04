@@ -76,25 +76,54 @@ export default function Page() {
       <section className="bg-light py-5">
         <div className="container">
           <h2 className="text-center mb-4">Get in Touch</h2>
-          <form className="mx-auto" style={{ maxWidth: '500px' }}>
-            <div className="mb-3">
-              <label className="form-label">Name</label>
-              <input type="text" className="form-control rounded-pill" placeholder="Your Name" />
-            </div>
-            <div className="mb-3">
-              <label className="form-label">Email</label>
-              <input type="email" className="form-control rounded-pill" placeholder="you@example.com" />
-            </div>
-            <div className="mb-3">
-              <label className="form-label">Message</label>
-              <textarea className="form-control rounded" rows={4} placeholder="Type your message"></textarea>
-            </div>
-            <div className="text-center">
-              <button type="submit" className="btn btn-primary px-4 rounded-pill">
-                Send Message
-              </button>
-            </div>
-          </form>
+          <section className="bg-light py-5">
+  <div className="container">
+    <h2 className="text-center mb-4">Get in Touch</h2>
+    <form
+      action="https://formspree.io/f/xeozlyek"
+      method="POST"
+      className="mx-auto"
+      style={{ maxWidth: '500px' }}
+    >
+      <div className="mb-3">
+        <label className="form-label">Name</label>
+        <input
+          type="text"
+          name="name"
+          className="form-control rounded-pill"
+          placeholder="Your Name"
+          required
+        />
+      </div>
+      <div className="mb-3">
+        <label className="form-label">Email</label>
+        <input
+          type="email"
+          name="email"
+          className="form-control rounded-pill"
+          placeholder="you@example.com"
+          required
+        />
+      </div>
+      <div className="mb-3">
+        <label className="form-label">Message</label>
+        <textarea
+          name="message"
+          className="form-control rounded"
+          rows={4}
+          placeholder="Type your message"
+          required
+        ></textarea>
+      </div>
+      <div className="text-center">
+        <button type="submit" className="btn btn-primary px-4 rounded-pill">
+          Send Message
+        </button>
+      </div>
+    </form>
+  </div>
+</section>
+
         </div>
       </section>
 
