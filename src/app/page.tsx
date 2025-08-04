@@ -74,9 +74,6 @@ export default function Page() {
 
       {/* Contact Section */}
       <section className="bg-light py-5">
-        <div className="container">
-          <h2 className="text-center mb-4">Get in Touch</h2>
-          <section className="bg-light py-5">
   <div className="container">
     <h2 className="text-center mb-4">Get in Touch</h2>
     <form
@@ -123,9 +120,6 @@ export default function Page() {
     </form>
   </div>
 </section>
-
-        </div>
-      </section>
 
       {/* Footer */}
       <footer className="text-center py-4">
