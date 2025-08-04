@@ -80,6 +80,18 @@
   font-weight: 500;
 }
 
+.try-bino-button {
+  display: inline-block;
+  background-color: #25D366; /* WhatsApp green */
+  color: white;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 6px;
+  text-decoration: none;
+  margin-top: 20px;
+}
+
 a.primary {
   background: var(--foreground);
   color: var(--background);

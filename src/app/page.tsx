@@ -6,21 +6,31 @@ export default function Page() {
   return (
     <>
       {/* Hero Section */}
-      <section className="text-center py-5 bg-light">
-        <Image
-          src="/next.svg"
-          alt="Bino Awareness Logo"
-          width={150}
-          height={50}
-          className="mb-3"
-        />
-        <h1 className="display-5 fw-bold text-primary">
-          Empowering Conversations, Everywhere
-        </h1>
-        <p className="lead text-muted">
-          Manage agents, automate support, and track insights — all in one place.
-        </p>
-      </section>
+<section className="text-center py-5 bg-light">
+  <Image
+    src="/next.svg"
+    alt="Bino Awareness Logo"
+    width={150}
+    height={50}
+    className="mb-3"
+  />
+  <h1 className="display-5 fw-bold text-primary">
+    Empowering Conversations, Everywhere
+  </h1>
+  <p className="lead text-muted">
+    Manage agents, automate support, and track insights — all in one place.
+  </p>
+
+  {/* WhatsApp CTA Button */}
+  <a
+    href="https://wa.me/918217270218?text=Hi%20Bino"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="btn btn-success btn-lg mt-3"
+  >
+    Try Bino on WhatsApp
+  </a>
+</section>
 
       {/* Features Section */}
       <section className="container py-5">
