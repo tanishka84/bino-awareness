@@ -123,12 +123,46 @@ export default function Page() {
 
       {/* Footer */}
       <footer className="text-center py-4">
-        <p className="mb-1">© 2025 Bino Awareness</p>
-        <div>
-          <a href="https://nextjs.org" className="text-decoration-none me-3">Next.js</a>
-          <a href="https://vercel.com" className="text-decoration-none">Vercel</a>
-        </div>
-      </footer>
+  <p className="mb-2">© 2025 Bino Awareness</p>
+  <div className="mb-2">
+    <a href="https://nextjs.org" className="text-decoration-none me-3">Next.js</a>
+    <a href="https://vercel.com" className="text-decoration-none">Vercel</a>
+  </div>
+  <div className="d-flex justify-content-center gap-4 mt-3">
+    <a
+      href="https://linkedin.com/in/YOUR_LINKEDIN_USERNAME"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="LinkedIn"
+    >
+      <i className="bi bi-linkedin fs-4 text-primary"></i>
+    </a>
+    <a
+      href="https://github.com/YOUR_GITHUB_USERNAME"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="GitHub"
+    >
+      <i className="bi bi-github fs-4 text-dark"></i>
+    </a>
+    <a
+      href="https://twitter.com/YOUR_TWITTER_USERNAME"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Twitter"
+    >
+      <i className="bi bi-twitter fs-4 text-info"></i>
+    </a>
+    <a
+      href="https://facebook.com/YOUR_FACEBOOK_USERNAME"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Facebook"
+    >
+      <i className="bi bi-facebook fs-4 text-primary"></i>
+    </a>
+  </div>
+</footer>
     </>
   );
 }
