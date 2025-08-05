@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import Image from 'next/image';
 
 export default function Page() {
   const [referralLink, setReferralLink] = useState('');
@@ -30,48 +29,80 @@ export default function Page() {
     <>
       {/* Hero Section */}
       <section className="text-center py-5 bg-light">
-        <Image
-          src="https://media.licdn.com/dms/image/v2/D560BAQEpquWjsLFcqQ/company-logo_200_200/company-logo_200_200/0/1692185447204/boni1_logo"
-          alt="Bino Awareness Logo"
-          width={150}
-          height={50}
-          className="mb-3"
-        />
         <h1 className="display-5 fw-bold text-primary">
           Empowering Conversations, Everywhere
         </h1>
         <p className="lead text-muted">
           Manage agents, automate support, and track insights — all in one place.
         </p>
-
         {/* WhatsApp CTA (Demo Mode) */}
-        <a
-          href="#"
-          onClick={(e) => {
-            e.preventDefault();
-            alert("WhatsApp integration is currently in demo mode. The feature will go live post-deployment.");
-          }}
-          className="btn btn-success position-fixed"
+        <div
+          className="position-fixed"
           style={{
             bottom: '20px',
             right: '20px',
             zIndex: 1000,
-            borderRadius: '50%',
-            width: '60px',
-            height: '60px',
             display: 'flex',
-            justifyContent: 'center',
+            flexDirection: 'column',
             alignItems: 'center',
-            fontSize: '24px',
+            gap: '6px',
           }}
-          title="Try Bino on WhatsApp"
         >
-          <i className="bi bi-whatsapp"></i>
-        </a>
+          {/* Label */}
+          <span
+            className="bg-dark text-white px-2 py-1 rounded"
+            style={{
+              fontSize: '12px',
+              opacity: 0,
+              transition: 'opacity 0.3s',
+              whiteSpace: 'nowrap',
+            }}
+            id="whatsapp-label"
+          >
+            Talk to Bino
+          </span>
+
+          {/* Button */}
+          <a
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              alert("WhatsApp integration is currently in demo mode. The feature will go live post-deployment.");
+            }}
+            className="btn btn-success"
+            onMouseEnter={() => {
+              const label = document.getElementById("whatsapp-label");
+              if (label) label.style.opacity = "1";
+            }}
+            onMouseLeave={() => {
+              const label = document.getElementById("whatsapp-label");
+              if (label) label.style.opacity = "0";
+            }}
+            style={{
+              borderRadius: '50%',
+              width: '60px',
+              height: '60px',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              fontSize: '24px',
+            }}
+            title="Try Bino on WhatsApp"
+          >
+            <i className="bi bi-whatsapp"></i>
+          </a>
+        </div>
+
       </section>
 
-            {/* Sample Queries Section */}
+      {/* Sample Queries Section */}
       <section className="container py-5">
+        <button
+          className="btn btn-success mt-3"
+          onClick={() => alert("This is a demo! WhatsApp integration coming soon.")}
+        >
+          Try Bino on WhatsApp
+        </button>
         <p className="text-muted">Try asking Bino:</p>
         <h2 className="text-center mb-4">What Can You Ask Bino?</h2>
         <div className="row text-center">
