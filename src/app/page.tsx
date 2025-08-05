@@ -28,32 +28,13 @@ export default function Page() {
   return (
     <>
       {/* Hero Section */}
-      <section className="container py-5">
-        <div className="mb-5">
-          <h3>Agent Management (Coming Soon)</h3>
-          <p className="text-muted">
-            Assign agents to WhatsApp chats, monitor interactions, and optimize customer response time. This feature will be available post-deployment.
-          </p>
-        </div>
-
-        <div className="mb-5">
-          <h3>AI Automation (Demo Mode)</h3>
-          <p className="text-muted">
-            Automate common responses and simplify support workflows. The automation logic is currently simulated for demonstration.
-          </p>
-        </div>
-
-        <div className="mb-5">
-          <h3>Analytics Dashboard (In Progress)</h3>
-          <p className="text-muted">
-            Visualize chat insights, agent performance, and customer trends in one place. We&#39;re working on integrating this soon.
-          </p>
-        </div>
-
-        <p className="text-center text-muted mt-4">
-          *Note: This is a demo version. Features shown here are under development.
+      <section className="text-center py-5 bg-light">
+        <h1 className="display-5 fw-bold text-primary">
+          Empowering Conversations, Everywhere
+        </h1>
+        <p className="lead text-muted">
+          Manage agents, automate support, and track insights — all in one place.
         </p>
-
         {/* WhatsApp CTA (Demo Mode) */}
         <div
           className="position-fixed"
@@ -112,10 +93,10 @@ export default function Page() {
           </a>
         </div>
 
-      </section >
+      </section>
 
       {/* Sample Queries Section */}
-      < section className="container py-5" >
+      <section className="container py-5">
         <button
           className="btn btn-success mt-3"
           onClick={() => alert("This is a demo! WhatsApp integration coming soon.")}
@@ -141,10 +122,10 @@ export default function Page() {
             </div>
           </div>
         </div>
-      </section >
+      </section>
 
       {/* Features Section */}
-      < section className="container py-5" >
+      <section className="container py-5">
         <div className="row text-center">
           {[
             {
@@ -179,10 +160,10 @@ export default function Page() {
             </div>
           ))}
         </div>
-      </section >
+      </section>
 
       {/* Contact Section */}
-      < section className="bg-light py-5" >
+      <section className="bg-light py-5">
         <div className="container">
           <h2 className="text-center mb-4">Get in Touch</h2>
           <form
@@ -228,10 +209,10 @@ export default function Page() {
             </div>
           </form>
         </div>
-      </section >
+      </section>
 
       {/* Referral Section */}
-      < section className="py-5 bg-white text-center" >
+      <section className="py-5 bg-white text-center">
         <div className="container">
           <h2 className="mb-3">Get Rewarded for Spreading Bino</h2>
           <p className="text-muted mb-4">
@@ -261,19 +242,17 @@ export default function Page() {
           )}
         </div>
 
-        {
-          showToast && (
-            <div className="position-fixed bottom-0 end-0 p-3" style={{ zIndex: 9999 }}>
-              <div className="toast fade show bg-success text-white">
-                <div className="toast-body">Referral link copied to clipboard!</div>
-              </div>
+        {showToast && (
+          <div className="position-fixed bottom-0 end-0 p-3" style={{ zIndex: 9999 }}>
+            <div className="toast fade show bg-success text-white">
+              <div className="toast-body">Referral link copied to clipboard!</div>
             </div>
-          )
-        }
-      </section >
+          </div>
+        )}
+      </section>
 
       {/* Footer */}
-      < footer className="text-center py-4" >
+      <footer className="text-center py-4">
         <p className="mb-2">© 2025 Bino Awareness</p>
         <div className="mb-2">
           <a href="https://nextjs.org" className="text-decoration-none me-3">
@@ -321,7 +300,7 @@ export default function Page() {
           You can also reach us at{' '}
           <a href="mailto:contact@binoawareness.org">contact@binoawareness.org</a>
         </p>
-      </footer >
+      </footer>
 
       <style jsx>{`
         .fade-in {
