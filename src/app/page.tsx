@@ -1,14 +1,35 @@
 'use client';
 
+import { useState } from 'react';
 import Image from 'next/image';
 
 export default function Page() {
+const [referralLink, setReferralLink] = useState('');
+const [copied, setCopied] = useState(false);
+const [showToast, setShowToast] = useState(false);
+
+const generateReferralLink = () => {
+  const referralCode = Math.random().toString(36).substring(2, 8).toUpperCase();
+  const link = `https://binoawareness.org/referral?code=${referralCode}`;
+  navigator.clipboard.writeText(link);
+  setReferralLink(link);
+  setCopied(true);
+  setShowToast(true);
+  setTimeout(() => setShowToast(false), 3000); // hide after 3s
+};
+
+const copyAgain = () => {
+  navigator.clipboard.writeText(referralLink);
+  setShowToast(true);
+  setTimeout(() => setShowToast(false), 3000);
+};
+  
   return (
     <>
       {/* Hero Section */}
 <section className="text-center py-5 bg-light">
   <Image
-    src="/next.svg"
+    src="https://media.licdn.com/dms/image/v2/D560BAQEpquWjsLFcqQ/company-logo_200_200/company-logo_200_200/0/1692185447204/boni1_logo"
     alt="Bino Awareness Logo"
     width={150}
     height={50}
@@ -28,13 +49,47 @@ export default function Page() {
     e.preventDefault();
     alert("WhatsApp integration is currently in demo mode. The feature will go live post-deployment.");
   }}
-  className="btn btn-success rounded-pill px-4 mt-3"
+  className="btn btn-success position-fixed"
+  style={{
+    bottom: '20px',
+    right: '20px',
+    zIndex: 1000,
+    borderRadius: '50%',
+    width: '60px',
+    height: '60px',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    fontSize: '24px'
+  }}
+  title="Try Bino on WhatsApp"
 >
-  Try Bino on WhatsApp
+  <i className="bi bi-whatsapp"></i>
 </a>
-<p className="text-muted mt-2" style={{ fontSize: "0.85rem" }}>
-  *Demo only — WhatsApp integration coming soon.
-</p>
+
+</section>
+
+{/* Sample Queries Section */}
+<section className="container py-5">
+  <p className="text-muted">Try asking Bino:</p>
+  <h2 className="text-center mb-4">What Can You Ask Bino?</h2>
+  <div className="row text-center">
+    <div className="col-md-4 mb-3">
+      <div className="p-3 border rounded shadow-sm">
+        <p className="text-muted">"How do I apply for a voter ID?"</p>
+      </div>
+    </div>
+    <div className="col-md-4 mb-3">
+      <div className="p-3 border rounded shadow-sm">
+        <p className="text-muted">"Tell me about child labor laws in India."</p>
+      </div>
+    </div>
+    <div className="col-md-4 mb-3">
+      <div className="p-3 border rounded shadow-sm">
+        <p className="text-muted">"Where can I report domestic violence anonymously?"</p>
+      </div>
+    </div>
+  </div>
 </section>
 
       {/* Features Section */}
@@ -85,6 +140,7 @@ export default function Page() {
             </div>
           </div>
         </div>
+        
       </section>
 
       {/* Contact Section */}
@@ -136,6 +192,70 @@ export default function Page() {
   </div>
 </section>
 
+{/* === Referral Section === */}
+      <section className="py-5 bg-white text-center">
+  <div className="container">
+    <h2 className="mb-3">Get Rewarded for Spreading Bino</h2>
+    <p className="text-muted mb-4">
+      Invite your friends and unlock early features. Earn free credits!
+    </p>
+    <button
+      className="btn btn-outline-primary rounded-pill mb-3"
+      onClick={generateReferralLink}
+    >
+      Generate Referral Link
+    </button>
+
+    {referralLink && (
+      <div
+        className="alert alert-success mx-auto fade-in"
+        style={{ maxWidth: '500px' }}
+      >
+        Referral link copied! <br />
+        <a href={referralLink} target="_blank" rel="noopener noreferrer">
+          {referralLink}
+        </a>
+        <br />
+        <button
+          onClick={copyAgain}
+          className="btn btn-sm btn-secondary mt-2"
+        >
+          Copy Again
+        </button>
+      </div>
+    )}
+  </div>
+
+  {/* Toast message */}
+  {showToast && (
+    <div className="position-fixed bottom-0 end-0 p-3" style={{ zIndex: 9999 }}>
+      <div className="toast fade show bg-success text-white">
+        <div className="toast-body">
+          Referral link copied to clipboard!
+        </div>
+      </div>
+    </div>
+  )}
+</section>
+
+<style jsx>{`
+  .fade-in {
+    animation: fadeIn 0.6s ease-in;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+`}</style>
+
+
       {/* Footer */}
       <footer className="text-center py-4">
   <p className="mb-2">© 2025 Bino Awareness</p>
@@ -174,6 +294,8 @@ export default function Page() {
       rel="noopener noreferrer"
       aria-label="Facebook"
     >
+      <p className="text-center text-muted mt-3">You can also reach us at <a href="mailto:contact@binoawareness.org">contact@binoawareness.org</a></p>
+
       <i className="bi bi-facebook fs-4 text-primary"></i>
     </a>
   </div>
