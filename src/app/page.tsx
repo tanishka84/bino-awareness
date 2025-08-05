@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 export default function Page() {
   const [referralLink, setReferralLink] = useState('');
-  const [copied, setCopied] = useState(false);
+  //const [copied, setCopied] = useState(false);
   const [showToast, setShowToast] = useState(false);
 
   const generateReferralLink = () => {
@@ -13,7 +13,7 @@ export default function Page() {
     const link = `https://binoawareness.org/referral?code=${referralCode}`;
     navigator.clipboard.writeText(link);
     setReferralLink(link);
-    setCopied(true);
+    //setCopied(true);
     setShowToast(true);
     setTimeout(() => setShowToast(false), 3000);
   };
@@ -70,24 +70,24 @@ export default function Page() {
         </a>
       </section>
 
-      {/* Sample Queries Section */}
+            {/* Sample Queries Section */}
       <section className="container py-5">
         <p className="text-muted">Try asking Bino:</p>
         <h2 className="text-center mb-4">What Can You Ask Bino?</h2>
         <div className="row text-center">
           <div className="col-md-4 mb-3">
             <div className="p-3 border rounded shadow-sm">
-              <p className="text-muted">"How do I apply for a voter ID?"</p>
+              <p className="text-muted">&quot;How do I apply for a voter ID?&quot;</p>
             </div>
           </div>
           <div className="col-md-4 mb-3">
             <div className="p-3 border rounded shadow-sm">
-              <p className="text-muted">"Tell me about child labor laws in India."</p>
+              <p className="text-muted">&quot;Tell me about child labor laws in India.&quot;</p>
             </div>
           </div>
           <div className="col-md-4 mb-3">
             <div className="p-3 border rounded shadow-sm">
-              <p className="text-muted">"Where can I report domestic violence anonymously?"</p>
+              <p className="text-muted">&quot;Where can I report domestic violence anonymously?&quot;</p>
             </div>
           </div>
         </div>
