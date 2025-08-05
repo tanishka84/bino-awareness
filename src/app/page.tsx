@@ -46,76 +46,76 @@ export default function Page() {
         <div className="mb-5">
           <h3>Analytics Dashboard (In Progress)</h3>
           <p className="text-muted">
-            Visualize chat insights, agent performance, and customer trends in one place. We're working on integrating this soon.
+            Visualize chat insights, agent performance, and customer trends in one place. We&#39;re working on integrating this soon.
           </p>
         </div>
 
-      <p className="text-center text-muted mt-4">
-        *Note: This is a demo version. Features shown here are under development.
-      </p>
+        <p className="text-center text-muted mt-4">
+          *Note: This is a demo version. Features shown here are under development.
+        </p>
 
-      {/* WhatsApp CTA (Demo Mode) */}
-      <div
-        className="position-fixed"
-        style={{
-          bottom: '20px',
-          right: '20px',
-          zIndex: 1000,
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          gap: '6px',
-        }}
-      >
-        {/* Label */}
-        <span
-          className="bg-dark text-white px-2 py-1 rounded"
+        {/* WhatsApp CTA (Demo Mode) */}
+        <div
+          className="position-fixed"
           style={{
-            fontSize: '12px',
-            opacity: 0,
-            transition: 'opacity 0.3s',
-            whiteSpace: 'nowrap',
-          }}
-          id="whatsapp-label"
-        >
-          Talk to Bino
-        </span>
-
-        {/* Button */}
-        <a
-          href="#"
-          onClick={(e) => {
-            e.preventDefault();
-            alert("WhatsApp integration is currently in demo mode. The feature will go live post-deployment.");
-          }}
-          className="btn btn-success"
-          onMouseEnter={() => {
-            const label = document.getElementById("whatsapp-label");
-            if (label) label.style.opacity = "1";
-          }}
-          onMouseLeave={() => {
-            const label = document.getElementById("whatsapp-label");
-            if (label) label.style.opacity = "0";
-          }}
-          style={{
-            borderRadius: '50%',
-            width: '60px',
-            height: '60px',
+            bottom: '20px',
+            right: '20px',
+            zIndex: 1000,
             display: 'flex',
-            justifyContent: 'center',
+            flexDirection: 'column',
             alignItems: 'center',
-            fontSize: '24px',
+            gap: '6px',
           }}
-          title="Try Bino on WhatsApp"
         >
-          <i className="bi bi-whatsapp"></i>
-        </a>
-      </div>
+          {/* Label */}
+          <span
+            className="bg-dark text-white px-2 py-1 rounded"
+            style={{
+              fontSize: '12px',
+              opacity: 0,
+              transition: 'opacity 0.3s',
+              whiteSpace: 'nowrap',
+            }}
+            id="whatsapp-label"
+          >
+            Talk to Bino
+          </span>
 
-    </section >
+          {/* Button */}
+          <a
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              alert("WhatsApp integration is currently in demo mode. The feature will go live post-deployment.");
+            }}
+            className="btn btn-success"
+            onMouseEnter={() => {
+              const label = document.getElementById("whatsapp-label");
+              if (label) label.style.opacity = "1";
+            }}
+            onMouseLeave={() => {
+              const label = document.getElementById("whatsapp-label");
+              if (label) label.style.opacity = "0";
+            }}
+            style={{
+              borderRadius: '50%',
+              width: '60px',
+              height: '60px',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              fontSize: '24px',
+            }}
+            title="Try Bino on WhatsApp"
+          >
+            <i className="bi bi-whatsapp"></i>
+          </a>
+        </div>
 
-      {/* Sample Queries Section */ }
-      < section className = "container py-5" >
+      </section >
+
+      {/* Sample Queries Section */}
+      < section className="container py-5" >
         <button
           className="btn btn-success mt-3"
           onClick={() => alert("This is a demo! WhatsApp integration coming soon.")}
@@ -143,137 +143,137 @@ export default function Page() {
         </div>
       </section >
 
-    {/* Features Section */ }
-    < section className = "container py-5" >
-      <div className="row text-center">
-        {[
-          {
-            icon: "bi-person-badge",
-            title: "Agent Management",
-            desc: "Handle agent profiles, shifts & performance all from one dashboard.",
-          },
-          {
-            icon: "bi-cpu",
-            title: "AI Automation",
-            desc: "Automate responses and reduce workload with smart AI tools.",
-          },
-          {
-            icon: "bi-chat-dots",
-            title: "Multi-Channel Support",
-            desc: "Engage customers via WhatsApp, Email, and more from one hub.",
-          },
-          {
-            icon: "bi-bar-chart",
-            title: "Analytics Dashboard",
-            desc: "Monitor performance metrics in real-time for data-driven insights.",
-          },
-        ].map((feature, index) => (
-          <div className="col-md-3 mb-4" key={index}>
-            <div className="card shadow-sm h-100">
-              <div className="card-body">
-                <i className={`bi ${feature.icon} fs-1 text-primary`}></i>
-                <h5 className="card-title mt-3">{feature.title}</h5>
-                <p className="card-text text-muted">{feature.desc}</p>
+      {/* Features Section */}
+      < section className="container py-5" >
+        <div className="row text-center">
+          {[
+            {
+              icon: "bi-person-badge",
+              title: "Agent Management",
+              desc: "Handle agent profiles, shifts & performance all from one dashboard.",
+            },
+            {
+              icon: "bi-cpu",
+              title: "AI Automation",
+              desc: "Automate responses and reduce workload with smart AI tools.",
+            },
+            {
+              icon: "bi-chat-dots",
+              title: "Multi-Channel Support",
+              desc: "Engage customers via WhatsApp, Email, and more from one hub.",
+            },
+            {
+              icon: "bi-bar-chart",
+              title: "Analytics Dashboard",
+              desc: "Monitor performance metrics in real-time for data-driven insights.",
+            },
+          ].map((feature, index) => (
+            <div className="col-md-3 mb-4" key={index}>
+              <div className="card shadow-sm h-100">
+                <div className="card-body">
+                  <i className={`bi ${feature.icon} fs-1 text-primary`}></i>
+                  <h5 className="card-title mt-3">{feature.title}</h5>
+                  <p className="card-text text-muted">{feature.desc}</p>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
       </section >
 
-    {/* Contact Section */ }
-    < section className = "bg-light py-5" >
-      <div className="container">
-        <h2 className="text-center mb-4">Get in Touch</h2>
-        <form
-          action="https://formspree.io/f/xeozlyek"
-          method="POST"
-          className="mx-auto"
-          style={{ maxWidth: '500px' }}
-        >
-          <div className="mb-3">
-            <label className="form-label">Name</label>
-            <input
-              type="text"
-              name="name"
-              className="form-control rounded-pill"
-              placeholder="Your Name"
-              required
-            />
-          </div>
-          <div className="mb-3">
-            <label className="form-label">Email</label>
-            <input
-              type="email"
-              name="email"
-              className="form-control rounded-pill"
-              placeholder="you@example.com"
-              required
-            />
-          </div>
-          <div className="mb-3">
-            <label className="form-label">Message</label>
-            <textarea
-              name="message"
-              className="form-control rounded"
-              rows={4}
-              placeholder="Type your message"
-              required
-            ></textarea>
-          </div>
-          <div className="text-center">
-            <button type="submit" className="btn btn-primary px-4 rounded-pill">
-              Send Message
-            </button>
-          </div>
-        </form>
-      </div>
-      </section >
-
-    {/* Referral Section */ }
-    < section className = "py-5 bg-white text-center" >
-      <div className="container">
-        <h2 className="mb-3">Get Rewarded for Spreading Bino</h2>
-        <p className="text-muted mb-4">
-          Invite your friends and unlock early features. Earn free credits!
-        </p>
-        <button
-          className="btn btn-outline-primary rounded-pill mb-3"
-          onClick={generateReferralLink}
-        >
-          Generate Referral Link
-        </button>
-
-        {referralLink && (
-          <div
-            className="alert alert-success mx-auto fade-in"
+      {/* Contact Section */}
+      < section className="bg-light py-5" >
+        <div className="container">
+          <h2 className="text-center mb-4">Get in Touch</h2>
+          <form
+            action="https://formspree.io/f/xeozlyek"
+            method="POST"
+            className="mx-auto"
             style={{ maxWidth: '500px' }}
           >
-            Referral link copied! <br />
-            <a href={referralLink} target="_blank" rel="noopener noreferrer">
-              {referralLink}
-            </a>
-            <br />
-            <button onClick={copyAgain} className="btn btn-sm btn-secondary mt-2">
-              Copy Again
-            </button>
-          </div>
-        )}
-      </div>
-
-  {
-    showToast && (
-      <div className="position-fixed bottom-0 end-0 p-3" style={{ zIndex: 9999 }}>
-        <div className="toast fade show bg-success text-white">
-          <div className="toast-body">Referral link copied to clipboard!</div>
+            <div className="mb-3">
+              <label className="form-label">Name</label>
+              <input
+                type="text"
+                name="name"
+                className="form-control rounded-pill"
+                placeholder="Your Name"
+                required
+              />
+            </div>
+            <div className="mb-3">
+              <label className="form-label">Email</label>
+              <input
+                type="email"
+                name="email"
+                className="form-control rounded-pill"
+                placeholder="you@example.com"
+                required
+              />
+            </div>
+            <div className="mb-3">
+              <label className="form-label">Message</label>
+              <textarea
+                name="message"
+                className="form-control rounded"
+                rows={4}
+                placeholder="Type your message"
+                required
+              ></textarea>
+            </div>
+            <div className="text-center">
+              <button type="submit" className="btn btn-primary px-4 rounded-pill">
+                Send Message
+              </button>
+            </div>
+          </form>
         </div>
-      </div>
-    )
-  }
       </section >
 
-    {/* Footer */ }
-    < footer className = "text-center py-4" >
+      {/* Referral Section */}
+      < section className="py-5 bg-white text-center" >
+        <div className="container">
+          <h2 className="mb-3">Get Rewarded for Spreading Bino</h2>
+          <p className="text-muted mb-4">
+            Invite your friends and unlock early features. Earn free credits!
+          </p>
+          <button
+            className="btn btn-outline-primary rounded-pill mb-3"
+            onClick={generateReferralLink}
+          >
+            Generate Referral Link
+          </button>
+
+          {referralLink && (
+            <div
+              className="alert alert-success mx-auto fade-in"
+              style={{ maxWidth: '500px' }}
+            >
+              Referral link copied! <br />
+              <a href={referralLink} target="_blank" rel="noopener noreferrer">
+                {referralLink}
+              </a>
+              <br />
+              <button onClick={copyAgain} className="btn btn-sm btn-secondary mt-2">
+                Copy Again
+              </button>
+            </div>
+          )}
+        </div>
+
+        {
+          showToast && (
+            <div className="position-fixed bottom-0 end-0 p-3" style={{ zIndex: 9999 }}>
+              <div className="toast fade show bg-success text-white">
+                <div className="toast-body">Referral link copied to clipboard!</div>
+              </div>
+            </div>
+          )
+        }
+      </section >
+
+      {/* Footer */}
+      < footer className="text-center py-4" >
         <p className="mb-2">© 2025 Bino Awareness</p>
         <div className="mb-2">
           <a href="https://nextjs.org" className="text-decoration-none me-3">
@@ -323,7 +323,7 @@ export default function Page() {
         </p>
       </footer >
 
-    <style jsx>{`
+      <style jsx>{`
         .fade-in {
           animation: fadeIn 0.6s ease-in;
         }
